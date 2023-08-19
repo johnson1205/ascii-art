@@ -1,0 +1,254 @@
+
+.App {
+  text-align: center;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.upload-area {
+  border: 2px solid #ccc;
+  width: 75%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border-style: dashed;
+  box-shadow:  0px 10px 30px rgba(89,89,152,0.1);
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.left-container {
+  margin-right: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-container {
+  margin-left: 10vh;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px; /* Add some spacing between columns */
+}
+
+/* 三個row */
+.width {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.height {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.ASCIIMap {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.button-container{
+  margin-top: 20px;
+}
+ 
+input {
+  background-color: transparent; /* 設定背景為透明 */
+  border: none; /* 移除邊框 */
+  border-bottom: 1px solid #000000; /* 僅保留底下一條線 */
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #000000;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e,#38ef7d);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+/* demo */
+
+
+
+.normal-button {
+  --color: #00A97F;
+  padding: 0.5em 0.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 10px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  margin-right: 5px;
+ }
+ 
+ .normal-button::before,.normal-button::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .normal-button::before {
+  top: -2em;
+  left: -2em;
+ }
+ 
+ .normal-button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .normal-button:hover::before, .normal-button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .normal-button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .normal-button:active {
+  filter: brightness(.8);
+ }
+
+
+
+.remove-button {
+  --color: #ff0c0c;
+  padding: 0.5em 0.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 10px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  margin-right: 5px;
+ }
+ 
+ .remove-button::before,.remove-button::after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .remove-button::before {
+  top: -2em;
+  left: -2em;
+ }
+ 
+ .remove-button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .remove-button:hover::before, .remove-button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .remove-button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .remove-button:active {
+  filter: brightness(.8);
+ }
