@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ascii-art/static/css/main.344a6758.css",
+    "main.js": "/ascii-art/static/js/main.c9790686.js",
+    "static/js/787.46bbaa2a.chunk.js": "/ascii-art/static/js/787.46bbaa2a.chunk.js",
+    "index.html": "/ascii-art/index.html",
+    "main.344a6758.css.map": "/ascii-art/static/css/main.344a6758.css.map",
+    "main.c9790686.js.map": "/ascii-art/static/js/main.c9790686.js.map",
+    "787.46bbaa2a.chunk.js.map": "/ascii-art/static/js/787.46bbaa2a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.344a6758.css",
+    "static/js/main.c9790686.js"
+  ]
+}
