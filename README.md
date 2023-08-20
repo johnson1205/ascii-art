@@ -1,4 +1,4 @@
-# Guess the Taiwan Township and City Map Game
+# Image to ASCII-art
 ## introduction
 A simple web tool converts images into ASCII art. 
 
