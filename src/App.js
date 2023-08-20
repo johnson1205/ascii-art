@@ -1,7 +1,7 @@
 import './App.css';
 import { Button } from 'react-bootstrap';
 import { useDropzone } from 'react-dropzone';
-import React, { useRef, useState, useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 
 function useImage() {
   const [image, setImage] = useState(null);
@@ -39,26 +39,27 @@ function App() {
       const ctx = canvas.getContext('2d');
       const img = new Image();
       img.src = image.url;
-
+  
       img.onload = () => {
         canvas.width = width;
         canvas.height = height;
-
+  
         ctx.drawImage(img, 0, 0, width, height);
-
-        let pixelText = '';
-
+  
+        const pixelArray = [];
+  
         for (let y = 0; y < height; y++) {
+          const row = [];
           for (let x = 0; x < width; x++) {
             const pixel = ctx.getImageData(x, y, 1, 1).data;
             const grayScale = (pixel[0] + pixel[1] + pixel[2]) / 3;
-            var portion = Math.round(Math.round(grayScale) / (256 / (asciimap.length - 1)));
-            pixelText += asciimap[portion] + ' ';
+            const portion = Math.round(Math.round(grayScale) / (256 / (asciimap.length - 1)));
+            row.push(asciimap[portion]);
           }
-          pixelText += '\n';
+          pixelArray.push(row.join(' '));
         }
-
-        setPixelInfo(pixelText);
+  
+        setPixelInfo(() => pixelArray.join('\n'));
       };
     }
   };
